@@ -34,3 +34,27 @@ print(string)
 #     kata_negasi_baru.append(kata)
 
 # print(kata_negasi_baru)
+
+list_word = ['Ini', 'sudah', 'tidak', 'bisa', 'dibiarkan']
+
+baru = list_word[2] + list_word[3]
+print(baru)
+
+for word in list_word:
+    if word == "tidak":
+        anu = word.join(map(str, word))
+        print(anu)
+    # print(word)
+
+text = "tidak direkomendasiin nih bukan favorit lagi intinya mah bye bye belum puas kalau gini caranya"
+
+
+def convert_negation(teks):
+    convert_tidak = teks.replace("tidak ", "tidak_")
+    convert_belum = convert_tidak.replace("belum ", "belum_")
+    last_convert = convert_belum.replace("bukan ", "bukan_")
+
+    return last_convert
+
+
+print(convert_negation(text))
